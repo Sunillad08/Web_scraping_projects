@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup as bs
 import datetime
 
-with open(r"C:\Users\DELL\Documents\web scraping training\yt scraping\data1.html",encoding="utf8") as f:
+with open(r"C:\Users\DELL\Documents\web scraping training\yt scraping\data.html",encoding="utf8") as f:
     soup = bs(f , "html.parser")
 
 video_div = soup.find_all("div", class_="style-scope ytd-video-renderer" , id = "dismissible")
@@ -33,9 +33,13 @@ with open(f"C:\\Users\\DELL\\Documents\\web scraping training\\yt scraping\\outp
         f.write(f"Duration : {str(duration)}\n")
 
         # views and upload time
-        views , upload_time = data.find_all("span" , class_="style-scope ytd-video-meta-block")
-
-        f.write(f"Views : {views.text} \nUploaded : {upload_time.text}\n")
+        try: # if both views and upload time are in format
+            views , upload_time = data.find_all("span" , class_="style-scope ytd-video-meta-block")
+            f.write(f"Views : {views.text} \nUploaded : {upload_time.text}\n")
+        except Exception: # if upload time is not found
+            views = data.find("span" , class_="style-scope ytd-video-meta-block")
+            upload_time = "Not Found"
+            f.write(f"Views : {views.text} \nUploaded : {upload_time}\n")
 
         # Thumbnail Image
         try:
