@@ -1,6 +1,10 @@
 from bs4 import BeautifulSoup as bs
 import datetime
 
+'''
+change path of on this line to path of your html data file!
+format : r"{path}"
+'''
 with open(r"C:\Users\DELL\Documents\web scraping training\yt scraping\data.html",encoding="utf8") as f:
     soup = bs(f , "html.parser")
 
@@ -10,6 +14,10 @@ video_div = soup.find_all("div", class_="style-scope ytd-video-renderer" , id = 
 date = datetime.datetime.now()
 file_name = f"{date.day}-{date.month}-{date.year}.txt"
 
+'''
+change path where you want to save your output file
+format : r"{path}"
+'''
 with open(f"C:\\Users\\DELL\\Documents\\web scraping training\\yt scraping\\outputs\\{file_name}" , "a" ,encoding="utf8") as f:
     
     f.write(f"{date}\n\n")
