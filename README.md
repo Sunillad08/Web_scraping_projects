@@ -1,22 +1,21 @@
 # My Web Scraping projects
 
-Hello , I am a student leaning **git** and **web scraping**. Web scraping is way to scrap data from website to use for any purpose. 
+Hello , I am a student leaning **git** and **web scraping**. Web scraping is way to scrap data from website to use for any purpose.
 
-My projects are not best or fast but they works. I am improving my projects over time.
+>I am using basic html data scraping approach as getting data from most the website directly is not possible or I don't know best way to do it.
 
-My projects information:
+>My projects are not best or fast but they works. I am improving my projects over time.
 
-**Data from Youtube trending page**:
+My Projects :
+1. Youtube
 ```
-yt scraping: Takes trending page data in html format . Code reads and scraps link , title , duration , views , upload time and thumbnail image. 
+• Youtube Trending page scraping
 ```
-
-**Data from Twitter explore page**:
+2. Instagram
 ```
-twitter scrap: Takes explore page data in html format . Code reads and scraps trending reason , trending topic and number of tweets on that topic. 
+• Instagram Profile page scraping
 ```
-
-**Data from instagram's profile page**:
+3. Twitter
 ```
-instagram scratch: Takes instagram user's profile page data in html format . Code reads and scraps username , bio , post count ,followers count , following count and available posts info . 
+• Twitter trending page scraping
 ```
