@@ -4,8 +4,9 @@ from bs4 import BeautifulSoup as bs
 '''
 change path to your html data file
 format = r"{path}"
+example : r"C:\Download\folder\data.html"
 '''
-with open(r'C:\Users\DELL\Documents\web scraping training\instagram scrach\data files\davyash.html' , encoding="utf8") as f:
+with open(r'C:\Users\DELL\Documents\web scraping training\Instagram projects\data files\am.html' , encoding="utf8") as f:
     data = bs(f , "html.parser")
 
 # getting section of data
@@ -20,8 +21,9 @@ file_name = f"{username.text}.txt"
 '''
 change path to any desired text file
 format = r"{path}"
+example : r"C:\Download\folder\text.txt"
 '''
-with open(f'C:\\Users\\DELL\\Documents\\web scraping training\\instagram scrach\\outputs\\{file_name}' , "w" , encoding="utf8") as f:
+with open(f'C:\\Users\\DELL\\Documents\\web scraping training\\Instagram projects\\outputs\\{file_name}' , "w" , encoding="utf8") as f:
     # username written
     f.write(f"Username = {username.text}")
 

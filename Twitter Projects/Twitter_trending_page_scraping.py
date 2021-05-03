@@ -5,9 +5,10 @@ import os
 '''
 change path of on this line to path of your html data file!
 format : r"{path}"
+example : r"C:\Download\folder\data.html"
 '''
 # reading data form file
-with open(r"C:\Users\DELL\Documents\web scraping training\twitter scrap\data1.html" , encoding="UTF8") as f:
+with open(r"C:\Users\DELL\Documents\web scraping training\Twitter Projects\data files\data.html" , encoding="UTF8") as f:
     soup = bs(f , 'html.parser')
 
 # creating small blocks of data to scan each trend's info
@@ -22,9 +23,10 @@ file_name = f"{date.day}-{date.month}-{date.year}.txt"
 '''
 change path where you want to save your output file
 format : r"{path}"
+example : r"C:\Download\folder\text.txt"
 '''
 # looping over every data and writing it in file
-with open(f"C:\\Users\\DELL\\Documents\\web scraping training\\twitter scrap\\outputs\\{file_name}" , "a", encoding="UTF8") as f:
+with open(f"C:\\Users\\DELL\\Documents\\web scraping training\\Twitter Projects\\outputs\\{file_name}" , "a", encoding="UTF8") as f:
 
     # adds timestamp in file
     f.write(f"{date.day}-{date.month}-{date.year} {date.hour}:{date.minute}:{date.second}\n")
