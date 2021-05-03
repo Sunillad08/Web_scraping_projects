@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as bs
 change path to your html data file
 format = r"{path}"
 '''
-with open(r'C:\Users\DELL\Documents\web scraping training\instagram scrach\data files\am.html' , encoding="utf8") as f:
+with open(r'C:\Users\DELL\Documents\web scraping training\instagram scrach\data files\davyash.html' , encoding="utf8") as f:
     data = bs(f , "html.parser")
 
 # getting section of data
@@ -78,6 +78,6 @@ with open(f'C:\\Users\\DELL\\Documents\\web scraping training\\instagram scrach\
         
         # Post title : comment by user who uploaded
         try:
-            f.write(f"\n\nPost Title : {post.img['alt']}")
+            f.write(f"\n\nPost description : {post.img['alt']}")
         except Exception:
             f.write(f"\n\nPost Title : None")
