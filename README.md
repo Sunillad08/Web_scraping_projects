@@ -10,3 +10,8 @@ My projects info:
 ```
 yt scraping: Takes trending page data in html format . Code reads and scraps link , title , duration , views , upload time and thumbnail image. 
 ```
+
+**Data from Twitter explore page**:
+```
+twitter scrap: Takes explore page data in html format . Code reads and scraps trending reason , trending topic and number of tweets on that topic. 
+```
